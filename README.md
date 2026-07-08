@@ -53,3 +53,7 @@ jiajing-ballet-site/
 - 课程卡片文字底色统一。
 - Rambert Grades 详情页加入三张官方宣传素材图，并保留 credit。
 - 课程详情页标题与正文大小下调。
+
+
+## V13 notes
+ABT detail page has been expanded with training pathway, class structure, exam explanation, JIAJING BALLET teaching approach, and a three-image gallery. Replace or credit official ABT imagery before public launch if needed.

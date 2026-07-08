@@ -279,6 +279,7 @@ h3 {
 .about,
 .programs,
 .faculty,
+.growth-showcase,
 .schedule,
 .faq,
 .contact,
@@ -324,7 +325,7 @@ h3 {
 .mission-block p:not(.label),
 .section-heading > p,
 .visual-copy p,
-.faculty-card p,
+.teacher-info p,
 .faq p,
 .contact p,
 .detail-intro p,
@@ -435,19 +436,67 @@ h3 {
 
 .program-card-body .text-link { margin-top: auto; padding-top: 24px; }
 
-.faculty-card {
+.teaching-team {
   display: grid;
-  grid-template-columns: 290px 1fr;
-  gap: 34px;
-  padding: 28px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
 }
 
-.faculty-portrait {
+.teacher-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.teacher-portrait {
   width: 100%;
-  height: 340px;
+  height: 240px;
   object-fit: cover;
   object-position: center top;
   border-radius: var(--radius-md);
+}
+
+.teacher-info p {
+  color: var(--muted);
+}
+
+.teacher-placeholder-mark {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 240px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--deep-navy), var(--soft-navy));
+  color: var(--white);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.credential-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.credential-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--sand);
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.03em;
 }
 
 .schedule-list { overflow: hidden; }
@@ -523,26 +572,26 @@ select {
 
 .page-hero {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 48px;
+  grid-template-columns: 0.86fr 1.04fr;
+  gap: 38px;
   align-items: center;
-  padding: 76px 0 86px;
-  min-height: 560px;
+  padding: 64px 0 78px;
+  min-height: 500px;
 }
 
 .page-hero img {
   width: 100%;
-  height: 420px;
+  height: 360px;
   object-fit: cover;
   object-position: center center;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow);
 }
 
-.page-hero h1 { font-size: clamp(38px, 5.3vw, 66px); }
+.page-hero h1 { font-size: clamp(34px, 4.7vw, 58px); }
 
 .page-hero .hero-subtitle {
-  font-size: clamp(21px, 2.3vw, 29px);
+  font-size: clamp(19px, 2vw, 25px);
   max-width: 620px;
   margin-top: 20px;
 }
@@ -668,11 +717,13 @@ select {
   .hero-content,
   .about,
   .contact,
-  .faculty-card,
+  .teaching-team,
+  .teacher-card,
   .page-hero,
   .detail-grid,
   .detail-grid.three,
-  .rambert-gallery {
+  .rambert-gallery,
+  .growth-gallery {
     grid-template-columns: 1fr;
   }
 
@@ -698,7 +749,8 @@ select {
   }
 
   .about-grid,
-  .program-grid.two-only {
+  .program-grid.two-only,
+  .growth-gallery {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -721,6 +773,7 @@ select {
   .about,
   .programs,
   .faculty,
+  .growth-showcase,
   .schedule,
   .faq,
   .contact,
@@ -747,7 +800,8 @@ select {
   }
 
   .about-grid,
-  .program-grid.two-only {
+  .program-grid.two-only,
+  .growth-gallery {
     grid-template-columns: 1fr;
   }
 
@@ -755,7 +809,7 @@ select {
 
   .rambert-gallery img { height: 260px; }
 
-  .faculty-card,
+  .teacher-card,
   .contact-form,
   .detail-grid article,
   .about-grid article {
@@ -765,4 +819,487 @@ select {
   .site-footer {
     flex-direction: column;
   }
+}
+
+
+/* ABT detail page expansion */
+.page-hero-body {
+  max-width: 620px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 15.5px;
+}
+
+.abt-page-hero img {
+  object-position: center center;
+}
+
+.detail-intro.wide {
+  max-width: 920px;
+}
+
+.detail-intro h2 {
+  margin-bottom: 18px;
+}
+
+.abt-principles article .number {
+  display: block;
+  margin-bottom: 28px;
+}
+
+.pathway-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.pathway-grid article,
+.detail-card-list article,
+.feature-list div {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.pathway-grid article {
+  padding: 28px;
+}
+
+.pathway-grid article h3 {
+  margin: 10px 0 16px;
+}
+
+.split-section {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 44px;
+  align-items: start;
+}
+
+.split-section.reverse {
+  grid-template-columns: 1fr 1.1fr;
+}
+
+.split-section p {
+  color: var(--muted);
+}
+
+.feature-list {
+  display: grid;
+  gap: 12px;
+}
+
+.feature-list div {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 18px;
+  padding: 18px 20px;
+}
+
+.feature-list strong {
+  color: var(--ink);
+}
+
+.feature-list span {
+  color: var(--muted);
+}
+
+.program-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.program-gallery figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+}
+
+.program-gallery img {
+  width: 100%;
+  height: 245px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.program-gallery figcaption {
+  padding: 12px 14px 14px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.detail-card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.detail-card-list article {
+  padding: 26px;
+}
+
+.detail-card-list ul {
+  margin: 18px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.detail-grid.four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.compact-top {
+  padding-top: 0;
+  border-top: 0;
+}
+
+@media (max-width: 900px) {
+  .pathway-grid,
+  .program-gallery,
+  .detail-grid.four,
+  .detail-card-list,
+  .split-section,
+  .split-section.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-list div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+
+
+.growth-showcase .section-heading {
+  align-items: end;
+}
+
+.growth-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.growth-card {
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+}
+
+.growth-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  object-position: center center;
+  background: var(--white);
+}
+
+.growth-card.portrait img {
+  height: 400px;
+}
+
+.growth-card.wide {
+  grid-column: span 2;
+}
+
+.growth-card.wide img {
+  height: 320px;
+}
+
+.growth-card figcaption {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 11px;
+  border-radius: 0;
+  background: rgba(17, 17, 17, 0.62);
+  color: var(--white);
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.abt-principles article h3 span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.abt-page-hero .hero-subtitle {
+  max-width: 560px;
+}
+
+.abt-page-hero .page-hero-body {
+  max-width: 540px;
+}
+
+@media (max-width: 900px) {
+  .growth-card.wide { grid-column: span 1; }
+  .growth-card img, .growth-card.portrait img, .growth-card.wide img { height: 320px; }
+}
+
+@media (max-width: 520px) {
+  .growth-card img, .growth-card.portrait img, .growth-card.wide img { height: 250px; }
+  .abt-principles article h3 span { font-size: 14px; }
+}
+
+@media (max-width: 900px) {
+  .teaching-team,
+  .teacher-card {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-portrait,
+  .teacher-placeholder-mark {
+    height: 320px;
+  }
+
+  .teacher-placeholder {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .growth-card img,
+  .growth-card.portrait img,
+  .growth-card.wide img {
+    height: auto;
+    max-height: none;
+  }
+
+  .growth-card figcaption {
+    top: 10px;
+    left: 10px;
+    font-size: 11px;
+  }
+
+  .teacher-portrait,
+  .teacher-placeholder-mark {
+    height: 280px;
+  }
+}
+
+
+/* V16: student growth photos without white padding */
+.growth-card {
+  display: block;
+  background: transparent;
+  line-height: 0;
+}
+
+.growth-card img,
+.growth-card.portrait img,
+.growth-card.wide img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: initial;
+  object-position: initial;
+  background: transparent;
+}
+
+.growth-card figcaption {
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  line-height: 1.2;
+}
+
+@media (max-width: 520px) {
+  .growth-card figcaption {
+    top: 10px;
+    left: 10px;
+  }
+}
+
+
+/* V17 refinements */
+.abt-page-hero h1 {
+  font-size: clamp(3.4rem, 6.1vw, 5.9rem);
+  line-height: 0.94;
+}
+
+.abt-page-hero img {
+  max-height: 540px;
+  object-fit: cover;
+}
+
+.student-credit-gallery figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.student-credit-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.student-credit-gallery figure.tall {
+  grid-row: span 2;
+}
+
+.student-credit-gallery figcaption {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  padding: 5px 11px;
+  background: rgba(17, 17, 17, 0.62);
+  color: var(--white);
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.studio-gallery {
+  grid-template-columns: 1.05fr 1fr 1fr;
+  grid-auto-rows: 240px;
+}
+
+@media (max-width: 900px) {
+  .studio-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 220px;
+  }
+  .student-credit-gallery figure.tall {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .studio-gallery {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+  .student-credit-gallery figure.tall,
+  .student-credit-gallery figure {
+    grid-row: span 1;
+  }
+  .student-credit-gallery img {
+    height: auto;
+  }
+}
+
+
+/* V18 Rambert detail page expansion */
+.rambert-page-hero h1 {
+  font-size: clamp(4.2rem, 8vw, 8rem);
+}
+
+.rambert-page-hero .hero-subtitle,
+.rambert-page-hero .page-hero-body {
+  max-width: 560px;
+}
+
+.hero-credit-image,
+.feature-image {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  background: var(--white);
+}
+
+.hero-credit-image img,
+.feature-image img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero-credit-image figcaption,
+.feature-image figcaption {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 11px;
+  background: rgba(17, 17, 17, 0.62);
+  color: var(--white);
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.rambert-strands article h3 span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.rambert-feature-gallery {
+  grid-template-columns: 1.05fr 1fr 1fr;
+  grid-auto-rows: 245px;
+}
+
+.rambert-feature-gallery figure.tall {
+  grid-row: span 2;
+}
+
+.detail-card-list.single-column {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 900px) {
+  .rambert-feature-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 230px;
+  }
+
+  .rambert-feature-gallery figure.tall {
+    grid-row: span 1;
+  }
+
+  .hero-credit-image img,
+  .feature-image img {
+    height: 360px;
+  }
+}
+
+@media (max-width: 640px) {
+  .rambert-feature-gallery {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .rambert-feature-gallery img,
+  .hero-credit-image img,
+  .feature-image img {
+    height: auto;
+  }
+
+  .rambert-page-hero h1 {
+    font-size: clamp(4rem, 18vw, 6rem);
+  }
+}
+
+
+/* V19 FAQ refinement */
+.faq details[open] {
+  background: var(--sand);
+}
+
+.faq details p + p {
+  margin-top: 12px;
 }
