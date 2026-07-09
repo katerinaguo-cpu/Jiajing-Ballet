@@ -8,12 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=25" />
 </head>
 <body>
   <header class="site-header">
     <a class="logo" href="#hero" aria-label="JIAJING BALLET Home">
-      <span class="logo-mark">JB</span>
+      <span class="logo-mark">J</span>
       <span class="logo-text">JIAJING BALLET</span>
     </a>
 
@@ -27,6 +27,7 @@
       <a href="#faculty">Faculty</a>
       <a href="#growth">Growth</a>
       <a href="#enrollment">Enrollment</a>
+      <a href="#wechat">WeChat</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -45,12 +46,15 @@
           <p class="hero-subtitle">Dance with your heart, and your feet will follow.</p>
           <p class="hero-body">A boutique dance education studio for young dancers and adult learners, where classical ballet training meets dance literacy, creative expression and long-term dancer wellness.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#contact">预约体验课</a>
+            <a class="button primary" href="https://wj.qq.com/s2/27266139/0309/" target="_blank" rel="noopener">预约体验课</a>
             <a class="button ghost" href="#programs">查看课程</a>
           </div>
         </div>
         <div class="hero-visual" aria-label="芭蕾课堂视觉图">
-          <img src="assets/hero-class-movement.jpeg" alt="JIAJING BALLET students in ballet class" class="hero-image" />
+          <figure class="hero-image-wrap">
+            <img src="assets/hero-class-movement.jpeg" alt="JIAJING BALLET students in ballet class" class="hero-image" />
+            <figcaption>Photo: Jay样纪实</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -131,37 +135,24 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">Faculty</p>
-          <h2>Teaching Team</h2>
+          <h2>Founder &amp; Faculty</h2>
         </div>
-        <p>JIAJING BALLET 的教学团队将以清晰、安全、细致的训练方法，陪伴学生在技术、音乐性、表达与身体理解中长期成长。</p>
+        <p>JIAJING BALLET 以清晰、安全、细致的训练方法，陪伴学生在技术、音乐性、表达与身体理解中长期成长。</p>
       </div>
 
-      <div class="teaching-team">
-        <article class="teacher-card">
+      <div class="teaching-team single">
+        <article class="teacher-card founder-card">
           <img class="teacher-portrait" src="assets/jiayue-guo-portrait.jpg" alt="Jiayue Guo portrait" />
           <div class="teacher-info">
             <p class="tag">Founder · Dance Educator</p>
             <h3>Jiayue Guo</h3>
-            <p>Jiayue is the founder of JIAJING BALLET. Her teaching brings together classical ballet training, dancer wellness, dance literacy, creative expression and cross-cultural arts education. She works with young dancers through a thoughtful, rigorous and child-centered approach.</p>
+            <p>Jiayue Guo is the founder of JIAJING BALLET, a dance educator whose work brings together classical ballet training, dancer wellness, dance literacy and creative expression. Her teaching is grounded in clear structure, safe practice and long-term artistic growth, supporting each student to build technical confidence, musical sensitivity and an expressive body of their own.</p>
             <div class="credential-list" aria-label="Jiayue Guo credentials">
               <span>NYU M.A. Dance Education</span>
-              <span>ABT NTC Certified Teacher</span>
+              <span>ABT NTC Certified Teacher · Pre-Primary–Level 7</span>
               <span>2026 ABT Affiliate Teacher</span>
-              <span>Rambert Grades Registered Teacher</span>
+              <span>Rambert Grades Level 1 Certified Teacher</span>
               <span>German Orff Association China · Creative Dance Interpreter</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="teacher-card teacher-placeholder">
-          <div class="teacher-placeholder-mark">YT</div>
-          <div class="teacher-info">
-            <p class="tag">Ballet Faculty · Technique &amp; Repertoire</p>
-            <h3>Yubo Tang</h3>
-            <p>Faculty profile to be added. This space is reserved for future teaching team information, including ballet technique, repertoire coaching and class collaboration.</p>
-            <div class="credential-list">
-              <span>Bio coming soon</span>
-              <span>Teaching focus to be added</span>
             </div>
           </div>
         </article>
@@ -182,7 +173,7 @@
           <figcaption>Photo: Jay样纪实</figcaption>
         </figure>
         <figure class="growth-card wide">
-          <img src="assets/student-growth-2.jpg" alt="JIAJING BALLET students posing in class" />
+          <img src="assets/student-growth-2.jpg" alt="JIAJING BALLET students sitting in ballet class" />
           <figcaption>Photo: Jay样纪实</figcaption>
         </figure>
         <figure class="growth-card">
@@ -230,8 +221,7 @@
         </div>
       </div>
     </section>
-
-    <section class="faq section-shell">
+<section class="faq section-shell">
       <div class="section-heading">
         <div>
           <p class="eyebrow">FAQ</p>
@@ -286,8 +276,27 @@
           <input type="text" name="contact" placeholder="微信 / 手机 / 邮箱" required />
         </label>
         <button class="button primary" type="submit">生成咨询邮件</button>
-        <p class="form-hint">V2 版本会打开邮箱草稿。正式上线后可以接入表单工具或微信二维码。</p>
+        <p class="form-hint">也可以直接点击页面中的“预约体验课”按钮，填写腾讯问卷预约表。</p>
       </form>
+    </section>
+
+    <section id="wechat" class="wechat-follow section-shell">
+      <div class="wechat-card">
+        <div>
+          <p class="eyebrow">More than Ballet</p>
+          <h2>关注 More than Ballet</h2>
+          <p>获取课程动态、教学文章、舞者健康与 ABT / Rambert 相关内容。</p>
+          <div class="wechat-actions">
+            <a class="button primary" href="https://wj.qq.com/s2/27266139/0309/" target="_blank" rel="noopener">预约体验课</a>
+            <a class="button secondary" href="#programs">查看课程</a>
+          </div>
+          <p class="tiny-note">点击“预约体验课”即可填写腾讯问卷预约表。</p>
+        </div>
+        <figure class="qr-card">
+          <img src="assets/more-than-ballet-qr.jpeg" alt="More than Ballet 公众号二维码" />
+          <figcaption>扫码关注公众号<br><span>More than Ballet 不止芭蕾</span></figcaption>
+        </figure>
+      </div>
     </section>
   </main>
 
@@ -296,6 +305,6 @@
     <p>More than Ballet · Beijing · Dance Education</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=23"></script>
 </body>
 </html>

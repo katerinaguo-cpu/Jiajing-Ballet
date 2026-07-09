@@ -57,3 +57,42 @@ jiajing-ballet-site/
 
 ## V13 notes
 ABT detail page has been expanded with training pathway, class structure, exam explanation, JIAJING BALLET teaching approach, and a three-image gallery. Replace or credit official ABT imagery before public launch if needed.
+
+
+## V20 表单与公众号入口
+
+- 首页新增 More than Ballet 公众号二维码板块，二维码图片位于 `assets/more-than-ballet-qr.jpeg`。
+- 目前“预约体验课”按钮使用预填写邮件链接。
+- 后续如果使用腾讯问卷 / 金数据 / 飞书表单，只需要在 `index.html` 中搜索 `预约体验课` 按钮，把 `href="mailto:..."` 替换为表单链接即可。
+
+## V21 腾讯问卷链接替换说明
+
+腾讯问卷创建完成后，复制「发布/分享」里的问卷链接。
+在 `index.html` 中搜索 `预约体验课` 按钮，把 `href="mailto:..."` 替换为你的腾讯问卷链接即可。
+上传到腾讯云 COS 后，建议同步覆盖 `index.html` 和 `styles.css`。
+
+## V22 调整
+
+- 顶部 logo 圆标由 `JB` 改为 `J`。
+- More than Ballet 公众号二维码板块移动到页面底部，并保持横向布局。
+- 缩小公众号板块标题与说明文字，避免移动端文字竖排。
+
+
+## V23 调整
+
+- 顶部圆形 logo 内的 `J` 加粗放大。
+- More than Ballet 二维码板块底部增加留白。
+- “预约体验课”按钮已接入腾讯问卷：https://wj.qq.com/s2/27266139/0309/
+- Faculty 暂时只保留 Jiayue Guo，移除 Tang Yubo placeholder。
+
+
+## V24 调整
+- 修复顶部 logo 中字母 J 的位置与比例。
+- Faculty 顶部说明改为：JIAJING BALLET 以清晰、安全、细致的训练方法，陪伴学生在技术、音乐性、表达与身体理解中长期成长。
+- Founder 头像改为完整显示，减少裁切。
+- 资质更新为：ABT NTC Certified Teacher · Pre-Primary–Level 7；Rambert Grades Level 1 Certified Teacher。
+
+## V25 调整
+- 替换首页 Student Growth 中的课堂照片为新上传的学生照片，并保留 `Photo: Jay样纪实`。
+- Founder 英文简介重新润色为更像官网的专业介绍。
+- 样式版本号更新为 `styles.css?v=25`，减少移动端缓存旧样式。
