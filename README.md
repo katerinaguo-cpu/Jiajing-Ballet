@@ -96,3 +96,7 @@ ABT detail page has been expanded with training pathway, class structure, exam e
 - 替换首页 Student Growth 中的课堂照片为新上传的学生照片，并保留 `Photo: Jay样纪实`。
 - Founder 英文简介重新润色为更像官网的专业介绍。
 - 样式版本号更新为 `styles.css?v=25`，减少移动端缓存旧样式。
+
+## V26 调整
+- 同步更新课程详情页顶部圆形 logo：`JB` → `J`。
+- 样式版本号更新为 `v=26`，减少浏览器缓存旧样式。
